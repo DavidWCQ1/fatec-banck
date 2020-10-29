@@ -1,0 +1,34 @@
+*{
+    /* border: solid tomato; */
+  
+  }
+
+
+.container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-color: solid red; 
+    height: 500px;
+    width: 600px;
+ };
+
+
+input{
+    width: 100px;
+    height: 15px;
+    border: 0 0 0 0 ;
+}
+
+label{
+    width: 100px;
+    height: 15px;
+    border: 0 0 0 0 ;
+
+}
+
+.boleto{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
