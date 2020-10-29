@@ -1,0 +1,28 @@
+	
+// Example Value
+// Model emissao de boleto
+
+{
+  "dueDate": "2017-07-21",
+  "amount": "19.87",
+  "reference": "12345ABC",
+  "description": "Depósito em conta",
+  "customer": {
+    "name": "Rafael Souza",
+    "email": "rafael@email.com",
+    "documentType": "CPF",
+    "document": "09929955747",
+    "phone": {
+      "areaCode": "11",
+      "number": "99999999"
+    },
+    "address": {
+      "postalCode": "04568020",
+      "street": "Rua Porto União",
+      "number": 295,
+      "district": "Brooklin",
+      "city": "São Paulo",
+      "state": "SP"
+    }
+  }
+}
