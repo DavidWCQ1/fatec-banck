@@ -1,2 +1,10 @@
-<app-toolbar></app-toolbar>
-<router-outlet></router-outlet>
+<app-toolbar fxLayout="column">
+    </app-toolbar>
+    <!-- <div fxLayout="row" fxFlex="100"> -->
+        <!-- <app-sidebar fxLayout="column" fxFlex="300px"></app-sidebar> -->
+        <div class="content" fxLayout="column" fxFlex>
+            <router-outlet></router-outlet>
+        </div>
+    <!-- </div> -->
+
+    <!-- <app-footer fxLayout="column"></app-footer> -->

@@ -113,3 +113,9 @@
   .card.card.highlight-card span {
     margin-left: 60px;
   }
+
+  .menu{
+    /* display: flex;
+    justify-content: row; */
+    height: 0px;
+  }

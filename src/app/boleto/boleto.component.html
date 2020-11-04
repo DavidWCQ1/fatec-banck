@@ -1,69 +1,65 @@
 <div class="container">
-  <form [formGroup]="boletoForm" (ngSubmit)="onSubmit()">
-    <div class="boleto">
-      <div>
-        <p>Informaçẽos do Boleto </p>
-        <label>Data de Vencimento</label><br>
-        <input type="text" formControlName="dueDate"><br>
+  <div class="formGroup">
+    <form [formGroup]="boletoForm" (ngSubmit)="onSubmit()">
+      <label>Informaçẽos do Boleto</label><br><br>
+      <label>Data de Vencimento</label><br><br>
+      <input type="text" formControlName="dueDate">
 
-        <label for="amount">Valor</label><br>
-        <input type="text" formControlName="amount"><br><br>
+      <label>Valor</label>
+      <input type="text" formControlName="amount"><br>
 
-        <label for="reference">Numero de referencia</label><br>
-        <input type="text" formControlName="reference"><br><br>
+      <label>Numero de referencia</label>
+      <input type="text" formControlName="reference">
 
-        <label for="description">Descrição</label><br>
-        <input type="text" formControlName="description"><br><br>
-      </div>
-      <div>
-        <p>Informaçẽos do Cliente</p>
-        <div formGroupName="customer" class="formCustomer">
-          <label for="name">Nome</label><br>
-          <input type="text" formControlName="name"><br><br>
+      <label for="description">Descrição</label>
+      <input type="text" formControlName="description"><br><br>
 
-          <label for="email">email</label><br>
-          <input type="text" formControlName="email" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"><br><br>
 
-          <label for="documentType">Tipo do Documento</label><br>
-          <input type="text" formControlName="documentType"><br><br>
+      <label>Informaçẽos do Cliente</label><br><br>
+      <div formGroupName="customer">
+        <label for="name">Nome</label>
+        <input type="text" formControlName="name">
 
-          <label for="document">Documento</label><br>
-          <input type="text" formControlName="documentType"><br><br>
+        <label for="email">email</label>
+        <input type="text" formControlName="email" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"><br>
 
-          <div formGroupName="phone">
-            <label for="areaCode">Codigo de Area</label><br>
-            <input type="text" id="areaCode" formControlName="areaCode"><br><br>
+        <label for="documentType">Tipo do Documento</label>
+        <input type="text" formControlName="documentType">
 
-            <label for="number">Codigo de Area</label><br>
-            <input type="text" formControlName="number"><br><br>
+        <label for="document">Documento</label>
+        <input type="text" formControlName="documentType"><br><br>
 
-          </div>
+        <div formGroupName="phone">
+          <label for="areaCode">Codigo de Area</label>
+          <input type="text" id="areaCode" formControlName="areaCode">
 
-          <div formGroupName="address">
+          <label for="number">Codigo de Area</label>
+          <input type="text" formControlName="number">
 
-            <label for="postalCode">Codigo Postal</label><br>
-            <input type="text" formControlName="postalCode"><br><br>
+        </div><br><br>
 
-            <label for="street">Rua</label><br>
-            <input type="text" formControlName="street"><br><br>
+        <div formGroupName="address">
 
-            <label for="number">Numero</label><br>
-            <input type="text" formControlName="number"><br><br>
+          <label for="postalCode">Codigo Postal</label>
+          <input type="text" formControlName="postalCode">
 
-            <label for="district">Bairro</label><br>
-            <input type="text" formControlName="district"><br><br>
+          <label for="street">Rua</label>
+          <input type="text" formControlName="street"><br>
 
-            <label for="number">city</label><br>
-            <input type="text" formControlName="number"><br><br>
+          <label for="number">Numero</label>
+          <input type="text" formControlName="number">
 
-            <label for="state">Numero</label><br>
-            <input type="text" formControlName="state"><br><br>
-          </div>
+          <label for="district">Bairro</label>
+          <input type="text" formControlName="district"><br>
+
+          <label for="number">city</label>
+          <input type="text" formControlName="number">
+
+          <label for="state">Numero</label>
+          <input type="text" formControlName="state">
         </div>
-        <input type="submit">
-
-      </div>
-    </div>
-
-  </form>
+      </div><br>
+      <input type="submit">
+    </form>
+  </div>
 </div>

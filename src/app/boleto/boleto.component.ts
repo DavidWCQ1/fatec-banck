@@ -53,14 +53,7 @@ export class BoletoComponent implements OnInit {
     })
   }
 
-
-  createBoletoForm() {
-
-
-  }
-
   onSubmit() {
-
-   this.boletoService.gerarBoleto(this.boletoForm.value.subscribe(console.log))
+   this.boletoService.gerarBoleto(this.boletoForm.value).subscribe(console.log)
   }
 }
