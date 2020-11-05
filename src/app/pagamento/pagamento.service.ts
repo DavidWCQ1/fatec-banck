@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+
 import { environment } from 'src/environments/environment';
 import { HttpClient } from '@angular/common/http';
 
@@ -6,20 +7,19 @@ import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-
-export class BoletoService {
+export class PagamentoService {
 
   constructor(
     private http: HttpClient
   ) { }
 
-  gerarBoleto(contract: any) {
+
+  consultarBarra(contract: any) {
     console.log('contract -->', contract)
     
-    let  a =  this.http.post(`${environment.GERAR_BOLETOS}`, contract);
+    let  a =  this.http.post(`${environment.PAGAMENTOS_DE_BARRAS}`, contract);
     console.log(a)
-    return  this.http.post(`${environment.GERAR_BOLETOS}`, contract);
+    return  this.http.post(`${environment.PAGAMENTOS_DE_BARRAS}`, contract);
 
   }
-
 }

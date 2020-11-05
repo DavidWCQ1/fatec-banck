@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="formGroup">
+      <form [formGroup]="pagamentoForm" (ngSubmit)="onSubmit()">
+        <label>Informaçẽos do Boleto</label><br><br>
+        <label>Data de Vencimento</label><br><br>
+        <input type="text" formControlName="barcodeNumber">
+  
+        <label>Valor</label>
+        <input type="text" formControlName="paymentDate"><br>
+        <input type="submit">
+      </form>
+    </div>
+  </div>
