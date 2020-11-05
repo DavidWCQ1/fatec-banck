@@ -1,0 +1,33 @@
+div{
+    /* border: solid blue; */
+    
+}
+
+.container {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    width: 960px;
+    height: 440px;
+    margin-left: 80px;
+}
+
+.formGroup{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 760px;
+    height: 440px;
+    /* border: solid black; */
+
+}
+
+.formCustomer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 60px;
+    /* height: 400px; */
+    /* border: solid tomato; */
+
+}

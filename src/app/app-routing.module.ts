@@ -4,6 +4,7 @@ import {BoletoComponent} from './boleto/boleto.component'
 
 const routes: Routes = [
   { path: 'boletos', loadChildren: () => import('./boleto/boleto.component.module').then(m => m.BoletoModule) },
+  { path: 'pagamentos', loadChildren: () => import('./pagamento/pagamento.componet.module').then(m => m.PagamentoModule) },
 
 ];
 
