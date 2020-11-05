@@ -16,9 +16,9 @@ export class BoletoService {
   gerarBoleto(contract: any) {
     console.log('contract -->', contract)
     
-    let  a =  this.http.post(`${environment.PAGAMENTOS_DE_BARRAS}`, contract);
+    let  a =  this.http.post(`${environment.GERAR_BOLETOS}`, contract);
     console.log(a)
-    return  this.http.post(`${environment.PAGAMENTOS_DE_BARRAS}`, contract);
+    return  this.http.post(`${environment.GERAR_BOLETOS}`, contract);
 
   }
 
