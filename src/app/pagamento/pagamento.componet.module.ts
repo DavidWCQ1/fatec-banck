@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-import { PagamentoComponent } from './pagamento.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { Routes, RouterModule } from '@angular/router';
+
 import { PagamentoService } from './pagamento.service';
+import { PagamentoComponent } from './pagamento.component';
 
 const routes: Routes = [
   { path: '', component: PagamentoComponent },

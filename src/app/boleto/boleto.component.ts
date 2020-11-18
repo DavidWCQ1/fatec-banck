@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
-import { Router, ActivatedRoute } from '@angular/router';
 
 
 import { BoletoService } from './boleto.service';
@@ -15,11 +14,11 @@ import { BoletoService } from './boleto.service';
 export class BoletoComponent implements OnInit {
   type = ''
   boletoForm: FormGroup
+  status = false
+  response : Object
 
   constructor(
     private boletoService: BoletoService,
-    private router: Router,
-    private route: ActivatedRoute,
     private formBuilder: FormBuilder,
 
   ) { }
@@ -53,6 +52,11 @@ export class BoletoComponent implements OnInit {
   }
 
   onSubmit() {
-   this.boletoService.gerarBoleto(this.boletoForm.value).subscribe(console.log)
+    this.boletoService.gerarBoleto(this.boletoForm.value)
+      .subscribe(data => {
+        this.status = true
+        this.response = data
+      }
+      )
   }
 }

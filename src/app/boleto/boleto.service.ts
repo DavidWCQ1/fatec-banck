@@ -8,18 +8,17 @@ import { HttpClient } from '@angular/common/http';
 })
 
 export class BoletoService {
-
+  token = sessionStorage.getItem('token')
   constructor(
     private http: HttpClient
   ) { }
-
+  
   gerarBoleto(contract: any) {
-    console.log('contract -->', contract)
-    
-    let  a =  this.http.post(`${environment.GERAR_BOLETOS}`, contract);
-    console.log(a)
-    return  this.http.post(`${environment.GERAR_BOLETOS}`, contract);
-
+    const headers = {
+      'Authorization': `Bearer ${this.token}`,
+      'x-transaction-id': '6e3065eb-f801-4747-a78b-39aac362150e'
+    }
+    return  this.http.post(`${environment.GERAR_BOLETOS}`, contract, { headers });
   }
 
 }
