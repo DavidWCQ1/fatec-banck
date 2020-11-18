@@ -6,7 +6,7 @@ div{
 .container {
     display: flex;
     justify-content: flex-end;
-    flex-direction: row;
+    flex-direction: column;
     width: 960px;
     height: 440px;
     margin-left: 80px;
@@ -30,4 +30,20 @@ div{
     /* height: 400px; */
     /* border: solid tomato; */
 
+}
+
+label{
+    margin-right: 10px;
+}
+
+input{
+    margin-right: 10px;
+    margin-bottom: 15px;
+}
+
+
+.response{
+    margin-top: 100px;
+    width: 200px;
+    height: 200px;
 }

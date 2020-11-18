@@ -5,11 +5,12 @@ div{
 
 .container {
     display: flex;
-    justify-content: flex-end;
-    flex-direction: row;
+    /* justify-content: flex-end; */
+    flex-direction: column;
     width: 960px;
     height: 440px;
     margin-left: 80px;
+    margin-top: 80px;
 }
 
 .formGroup{
@@ -30,4 +31,19 @@ div{
     /* height: 400px; */
     /* border: solid tomato; */
 
+}
+
+.response{
+    /* margin-top: 100px; */
+    background-color: #F0ffff ;
+
+}
+
+label{
+    margin-right: 10px;
+}
+
+input{
+    margin-right: 10px;
+    margin-bottom: 15px;
 }

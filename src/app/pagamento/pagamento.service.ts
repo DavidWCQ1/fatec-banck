@@ -13,13 +13,25 @@ export class PagamentoService {
     private http: HttpClient
   ) { }
 
+  token = sessionStorage.getItem('token')
 
   consultarBarra(contract: any) {
-    console.log('contract -->', contract)
-    
-    let  a =  this.http.post(`${environment.PAGAMENTOS_DE_BARRAS}`, contract);
-    console.log(a)
-    return  this.http.post(`${environment.PAGAMENTOS_DE_BARRAS}`, contract);
-
+    const headers = {
+      'Authorization': `Bearer ${this.token}`,
+      'x-transaction-id': '6e3065eb-f801-4747-a78b-39aac362150e'
+    }
+    return this.http.post(`${environment.PAGAMENTOS_DE_BARRAS_CONSULTA}`, contract, { headers });
   }
+
+
+  pagarBarra(contract: any) {
+    const headers = {
+      'Authorization': `Bearer ${this.token}`,
+      'x-transaction-id': '6e3065eb-f801-4747-a78b-39aac362150e'
+    }
+    return this.http.post(`${environment.PAGAMENTOS_DE_BARRAS_PAGAR}`, contract, { headers });
+  }
+
+
+
 }

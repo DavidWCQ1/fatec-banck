@@ -1,5 +1,6 @@
 <div class="container">
-  <div class="formGroup">
+
+  <div class="formGroup" *ngIf="!status"> 
     <form [formGroup]="boletoForm" (ngSubmit)="onSubmit()">
       <label>Informaçẽos do Boleto</label><br><br>
       <label>Data de Vencimento</label><br><br>
@@ -62,4 +63,11 @@
       <input type="submit">
     </form>
   </div>
+
+  <div class="response" *ngIf="status">
+    Codigo de Barras: {{ response["data"].barcodeNumber }}<br><br>
+    Data Vencimento: {{ response["data"].dueDate }}
+  
+  </div>
+
 </div>
