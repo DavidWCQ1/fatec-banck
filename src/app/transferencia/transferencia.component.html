@@ -1,0 +1,73 @@
+<div class="container">
+  <div class="formGroup">
+    <form [formGroup]="transferenciaForm" (ngSubmit)="onSubmit()">
+
+      <label>Informaçẽos para Transferencia</label><br>
+
+      <div formGroupName="targetAccount">
+
+        <label>banco</label><br>
+        <input type="text" formControlName="bank">
+
+        <label>agencia</label>
+        <input type="text" formControlName="branch"><br>
+
+        <label>conta</label>
+        <input type="text" formControlName="account">
+
+        <label>conta</label>
+        <input type="text" formControlName="accountType">
+
+
+        <div formGroupName="payee">
+
+          <label>nome</label>
+          <input type="text" formControlName="name">
+
+          <label>Tipo de documento</label>
+          <input type="text" formControlName="documentType"><br>
+
+          <label> Numero documento</label>
+          <input type="text" formControlName="document">
+        </div>
+      </div>
+
+      <label> Id do favorecido</label>
+      <input type="text" formControlName="favoredId"><br>
+
+      <label> A data em que se deseja realizar a transferência</label>
+      <input type="text" formControlName="date"><br>
+
+
+      <label> O valor a ser transferido</label>
+      <input type="text" formControlName="amount"><br>
+
+
+      <label> O motivo da transação</label>
+      <input type="text" formControlName="reason">
+
+      <label> Comentários da transação</label>
+      <input type="text" formControlName="comments"><br>
+
+      <label> Define se a transferência pode ser agendada para o próximo dia útil caso a data escolhida não seja um dia
+        útil </label>
+      <input type="text" formControlName="autoSchedule">
+
+      <label> URL de callback para receber resultado da análise de risco</label>
+      <input type="text" formControlName="callbackUrl"><br>
+
+
+      <input type="submit">
+    </form>
+  </div>
+
+  <div class="response" *ngIf="status">
+    <h2>
+      Numero da transferencia: {{ response["data"].referenceNumber }}<br><br>
+      Tipo de transferencia: {{ response["data"].transactionType }}<br><br>
+      Data transferencia: {{ response["data"].transactionDate }}<br><br>
+    </h2>
+
+  </div>
+
+</div>
