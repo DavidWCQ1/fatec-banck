@@ -20,8 +20,4 @@ export class ToolbarComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
-  boleto(){
-    let rote = '/login'
-  }
 }
