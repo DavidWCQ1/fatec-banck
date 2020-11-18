@@ -1,0 +1,19 @@
+.response{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 1024px;
+    height: 240px;
+    /* border: solid black; */
+}
+
+.ops{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+button{
+    width: 104px;
+    height: 40px;
+}
