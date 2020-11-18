@@ -1,6 +1,7 @@
 <div class="response">
-    <div class="ops" *ngFor="let i of response; index as ix">
-        <span>
+    <button (click)="showAcao()" *ngIf="status">Ações</button><br><br>
+    <div class="ops" *ngIf="isAcao">
+        <span *ngFor="let i of acao; index as ix">
             Nome do ativo: {{i.assetName}}<br>
             Classe do ativo : {{i.benchmarkClass}}<br>
             {{i.grossValue}}<br>
@@ -8,5 +9,60 @@
             {{i.incomeTaxValue}}<br>
             {{i.iofTaxValue}}<br>
         </span><br>
+        <button (click)="goBack()" *ngIf="!status">voltar</button><br><br>
+    </div>
+
+    <button (click)="showMultiMercado()" *ngIf="status">MultiMercado</button><br><br>
+    <div class="ops" *ngIf="isMultiMercado">
+        <span *ngFor="let i of multiMercado; index as ix">
+            Nome do ativo: {{i.assetName}}<br>
+            Classe do ativo : {{i.benchmarkClass}}<br>
+            {{i.grossValue}}<br>
+            {{i.netValue}}<br>
+            {{i.incomeTaxValue}}<br>
+            {{i.iofTaxValue}}<br>
+        </span><br>
+        <button (click)="goBack()" *ngIf="!status">voltar</button><br><br>
+    </div>
+
+    <button (click)="showCambial()" *ngIf="status">Cambial</button><br><br>
+    <div class="ops" *ngIf="isCambial">
+        <span *ngFor="let i of cambial; index as ix">
+            Nome do ativo: {{i.assetName}}<br>
+            Classe do ativo : {{i.benchmarkClass}}<br>
+            {{i.grossValue}}<br>
+            {{i.netValue}}<br>
+            {{i.incomeTaxValue}}<br>
+            {{i.iofTaxValue}}<br>
+        </span><br>
+        <button (click)="goBack()" *ngIf="!status">voltar</button><br><br>
+    </div>
+
+    <button (click)="showJuros()" *ngIf="status">Juros</button><br><br>
+    <div class="ops" *ngIf="isJuros">
+        <span *ngFor="let i of jurosPos; index as ix">
+            Nome do ativo: {{i.assetName}}<br>
+            Classe do ativo : {{i.benchmarkClass}}<br>
+            {{i.grossValue}}<br>
+            {{i.netValue}}<br>
+            {{i.incomeTaxValue}}<br>
+            {{i.iofTaxValue}}<br>
+        </span><br>
+        <button (click)="goBack()" *ngIf="!status">voltar</button><br><br>
+
+    </div>
+
+    <button (click)="showInflacao()" *ngIf="status">Inflacao</button><br><br>
+    <div class="ops" *ngIf="isInflacao">
+        <span *ngFor="let i of inflacao; index as ix">
+            Nome do ativo: {{i.assetName}}<br>
+            Classe do ativo : {{i.benchmarkClass}}<br>
+            {{i.grossValue}}<br>
+            {{i.netValue}}<br>
+            {{i.incomeTaxValue}}<br>
+            {{i.iofTaxValue}}<br>
+        </span><br>
+        <button (click)="goBack()" *ngIf="!status">voltar</button><br><br>
+
     </div>
 </div>
