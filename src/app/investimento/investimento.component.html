@@ -1,0 +1,12 @@
+<div class="response">
+    <div class="ops" *ngFor="let i of response; index as ix">
+        <span>
+            Nome do ativo: {{i.assetName}}<br>
+            Classe do ativo : {{i.benchmarkClass}}<br>
+            {{i.grossValue}}<br>
+            {{i.netValue}}<br>
+            {{i.incomeTaxValue}}<br>
+            {{i.iofTaxValue}}<br>
+        </span><br>
+    </div>
+</div>
