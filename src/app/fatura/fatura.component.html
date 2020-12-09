@@ -1,3 +1,8 @@
 <div class="response">
-    {{ response }}
+    <h3>
+        Numero do cartão: {{ response["data"][0].number}} <br>
+        Nome do Titular: {{ response["data"][0].holderName}} <br>
+        Codigo do cartão: {{ response["data"][0].brandCode}} <br>
+
+    </h3>
 </div>

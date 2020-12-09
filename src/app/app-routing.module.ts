@@ -9,6 +9,7 @@ const routes: Routes = [
   { path: 'faturas', loadChildren: () => import('./fatura/fatura.module').then(m => m.FaturaModule) },
   { path: 'transferencias', loadChildren: () => import('./transferencia/transferencia.module').then(m => m.TransferenciaModule) },
   { path: 'investimentos', loadChildren: () => import('./investimento/investimento.module').then(m => m.InvestimentoModule) },
+  { path: 'login', loadChildren: () => import('./login/login.module').then(m => m.LoginModule) },
 
 ];
 

@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="formGroup">
+  <div class="formGroup" *ngIf="!status">
     <form [formGroup]="transferenciaForm" (ngSubmit)="onSubmit()">
 
       <label>Informaçẽos para Transferencia</label><br>

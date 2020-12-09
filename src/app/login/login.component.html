@@ -1,0 +1,42 @@
+<div class="login-page" *ngIf="!status">
+  <div class="form">
+    <div  class="login-form">
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <input type="text" placeholder="email" formControlName="email" />
+        <input type="password" placeholder="password" formControlName="password" />
+        <button (click)="onSubmit()">login</button>
+        <p class="message">Not registered? <a (click)="show()">Create an account</a></p>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="login-page" *ngIf="status && !confirmCode">
+  <div class="form">
+    <div>
+      <form [formGroup]="singForm">
+        <input type="text" placeholder="name" formControlName="name" />
+        <input type="password" placeholder="password" formControlName="password"  />
+        <input type="text" placeholder="email address" formControlName="email"  />
+        <button (click)="onCrieate()">create</button>
+        <p class="message">Already registered? <a (click)="noShow()">Sign In</a></p>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<div class="login-page" *ngIf="confirmCode" >
+  <div class="form">
+    <div>
+      <form [formGroup]="confirm">
+        <input type="text" placeholder="email address" formControlName="userName"/>
+        <input type="text" placeholder="confirmation Code" formControlName="confirmationCode" />
+        <button (click)="onConfirm()">create</button>
+        <p class="message">Already registered? <a (click)="noShow()">Sign In</a></p>
+      </form>
+    </div>
+  </div>
+</div>

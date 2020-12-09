@@ -10,8 +10,14 @@ export class AppService {
 
   constructor(private http: HttpClient) { }
   getToken() {
-    return this.http.get(`${environment.GET_TOKEN}`,{responseType: 'text'})
-                        .subscribe((data: any) => {sessionStorage.setItem('token', data)})
+
+    const headers = {
+      'Content-Type': 'application/json'
+    }
+    return this.http.get(`${environment.ACESSO}//creden`,{ headers })
+                        .subscribe((data: any) => {sessionStorage.setItem('token', data.v)})
   }
 
 }
+
+

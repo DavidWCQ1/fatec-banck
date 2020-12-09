@@ -7,8 +7,8 @@ div{
     display: flex;
     /* justify-content: flex-end; */
     flex-direction: column;
-    width: 960px;
-    height: 440px;
+    /* width: 960px;
+    height: 440px; */
     margin-left: 80px;
     margin-top: 80px;
 }
@@ -17,8 +17,8 @@ div{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    width: 760px;
-    height: 440px;
+    width: 560px;
+    height: 450px;
     /* border: solid black; */
 
 }
@@ -35,7 +35,7 @@ div{
 
 .response{
     /* margin-top: 100px; */
-    background-color: #F0ffff ;
+    /* background-color: #F0ffff ; */
 
 }
 

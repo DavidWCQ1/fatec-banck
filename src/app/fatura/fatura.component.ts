@@ -10,7 +10,7 @@ import { FaturaService } from './fatura.service';
 })
 export class FaturaComponent implements OnInit {
 
-  response = ''
+  response = {}
 
   constructor(
 
@@ -21,7 +21,7 @@ export class FaturaComponent implements OnInit {
   ngOnInit() {
     this.faturaService.consultarFatura().subscribe(
       data =>{
-        this.response = JSON.stringify(data)
+        this.response = data
       })
   }
 }
